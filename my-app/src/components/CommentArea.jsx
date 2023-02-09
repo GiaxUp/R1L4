@@ -9,7 +9,7 @@ class CommentArea extends Component {
   };
 
   componentDidMount() {
-    fetch("https://striveschool-api.herokuapp.com/api/comments/", {
+    fetch(`https://striveschool-api.herokuapp.com/api/comments/${this.props.book}`, {
       headers: {
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U0ZWUwZGEyNDc4ZDAwMTNhMDU3ZjgiLCJpYXQiOjE2NzU5NDk2NTEsImV4cCI6MTY3NzE1OTI1MX0._NO0wZRYwTVzo1zNylyCQcwcKkEbYjfv-sA-3CXXf38",
@@ -28,7 +28,7 @@ class CommentArea extends Component {
     event.preventDefault();
 
     const newComment = {
-      author: "Your name",
+      author: "I",
       comment: this.state.comment,
     };
 
